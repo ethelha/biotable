@@ -1,45 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>現代生物學應用</title>
-      <link href="table.css" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC" rel="stylesheet"> 
+        <link href="table.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
     </head>
+    
     <body>
-<div class="jumbotron text-center">
-  <h1>DNA determines your appearance!</h1>
-  <p>check out below</p> 
-</div>
+        <div id="home">
+        <h1>DNA <br>determines<br>your appearance!</h1>
+        <h2>check out below
+            <a href="#1"><button class="button">GO!</button></a></h2>
+        <br>
+        <br>
+        <HR color="#939699" width="90%" 2px solid align="middle"></HR>
+        </div>
 
- 
-   <p> Question 1：<br>
+
+    
+        <p> <a id="1"></a>Question 1：<br>
         從第一印象看一個人第一印象的注重程度：（共有30點 可以在額度內自由分配）</p>
 
     <div class="slidecontainer">
-        <p>眼 eyes </p>
-        <input type="range" min="0" max="30" value="" class="slider" id="eyeRange">
-        <p>Value: <span id="eyevalue"></span></p>
+        <div>
+            <p>眼 eyes</p>
+            <p><input type="range" min="0" max="30" value="0" class="slider" id="eyeRange">
+            Value: <span id="eyevalue"></span></p>
+        </div>
         
-        <p>耳 ears </p>
-        <input type="range" min="0" max="30" value="" class="slider" id="earRange">
-        <p>Value: <span id="earvalue"></span></p>
+        <div>
+            <p>耳 ears </p>
+            <p><input type="range" min="0" max="30" value="0" class="slider" id="earRange">
+            Value: <span id="earvalue"></span></p>
+        </div>
         
-        <p>鼻 nose </p>
-        <input type="range" min="0" max="30" value="" class="slider" id="noseRange">
-        <p>Value: <span id="nosevalue"></span></p>
+        <div>
+            <p>鼻 nose </p>
+            <p><input type="range" min="0" max="30" value="0" class="slider" id="noseRange">
+            Value: <span id="nosevalue"></span></p>
+        </div>
         
-        <p>口 mouth </p>
-        <input type="range" min="0" max="30" value="" class="slider" id="mouthRange">
-        <p>Value: <span id="mouthvalue"></span></p>
+        <div>
+            <p>口 mouth </p>
+            <p><input type="range" min="0" max="30" value="0" class="slider" id="mouthRange">
+            Value: <span id="mouthvalue"></span></p>
+        </div>
         
-        <p>身高 height </p>
-        <input type="range" min="0" max="30" value="" class="slider" id="heightRange">
-        <p>Value: <span id="heightvalue"></span></p>
+        <div>
+            <p>身高 height </p>
+            <p><input type="range" min="0" max="30" value="0" class="slider" id="heightRange">
+            Value: <span id="heightvalue"></span></p>
         </div>  
         
-        
-        <p>Question 2：
+    </div> 
+    <p>Question 2：
         如果以後有機會選擇，用生物技術crispr來依構想製造小孩，你希望他長怎麼樣呢！
 （每一個部分有三個選項）</p>
     <script src="table.js"></script>
