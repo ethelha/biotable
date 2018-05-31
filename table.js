@@ -35,3 +35,23 @@ heightoutput.innerHTML = slider.value;
 slider.oninput = function() {
     heightoutput.innerHTML = this.value;
 }
+
+var aaa
+var max = 30
+document.addEventListener('input', function (event) {
+    if (event.target.classList.contains('slider')) {
+        total_score = parseInt(eyeoutput.innerHTML) + parseInt(earoutput.innerHTML) + parseInt(noseoutput.innerHTML) + parseInt(mouthoutput.innerHTML) + parseInt(heightoutput.innerHTML)
+        console.log(total_score)
+        if(total_score >= max) {
+            console.log('Max')
+            sliders = document.getElementsByClassName('slider')
+            for(var i=0; i<sliders.length; i++) {
+                if(event.target != sliders[i]) {
+                    sliders[i].value = 0
+                    sliders[i].parentElement.getElementsByTagName('span')[0].innerHTML = "0"
+                }
+            }
+        }
+
+    }
+}, false);
