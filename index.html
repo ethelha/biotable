@@ -1,63 +1,162 @@
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>現代生物學應用</title>
-        <link href="table.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
-    </head>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage整頁垂直導航跳頁動畫js</title>
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<link href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display" rel="stylesheet">
+<link href="homepage.css" rel="stylesheet" type="text/css">
+<style>
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.section1 { background: url(picture/WED-5.jpg);}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.fullPage.js"></script>
+<script>
+$(function(){  
+	$('#dowebok').fullpage({
+        'anchors': true,
+		sectionsColor: ['', ' #8dc1b2', '#e0e0e0', '#c4e1e1','#eedfd4'],
+		'navigation': true,
+        normalScrollElements: '.modal',
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div id="dowebok">
+	<div class="section section1">
+        <h1>C R I S P S</h1>
+        <button class="gobelow" id="bt1">Learn more</button>
+        <button class="start" id="bt2" onclick="document.getElementById('id01').style.display='block'">Start now</button>
+        <h4>clusters of regularly interspaced short palindromic repeats</h4>
+            <div id="id01" class="modal">  
+            <form id="myForm" class="modal-content animate" action="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="picture/dna-icon.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="container">
+                    <h5>歡迎您進入我們的表單，首先想先請問您的基本資料與對cripsr技術的了解程度。</h5>
+                    <br>
+                            <h5><label for="age">Age：</label></h5>
+                            <input type="number" min="0" max="100" id="age" placeholder="   Please Enter Your Age" name="age" required>
+                            
+                            <h5><label for="psw">Email：</label></h5>
+                            <input type="email" id="email" placeholder="Please Enter Your Email" name="email" required>
+                        <br>
+                    
+                        <h5>Gender：<select name="gender"><option id="male">male</option><option id="female">female</option></select></h5>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <h5>Siblings：
+                            <select name="siblings"><option id="bro">brother</option><option id="sis">sister</option><option id="both">brother & sister</option></select></h5>
+                        <br>
+                        <input type="checkbox" checked="checked" name="dna1" id="1" value ="S" onclick="return chk(this);"> <label for="1"><h5>我支持基因重組</h5></label>
+                        <input type="checkbox" name="dna2" id="2" value ="S" onclick="return chk(this);"><label for="2"><h5>我反對基因重組</h5></label>
+                        <input type="checkbox" name="dna3" id="3" value ="S" onclick="return chk(this);"><label for="3"><h5>我對基因重組無感</h5></label>
+                        <input type="checkbox" name="dna4" id="4" value ="S" onclick="return chk(this);"><label for="4"><h5>我不知道什麼是基因重組</h5></label>
+                        <br>
+                        <div class="yes">
+                                <input type="checkbox" checked="checked" name="remember" id="y" required><label for="y">
+                                我同意參與此次表單填寫
+                        </label></div>
+                </div>
+                
+                <div class="downcontainer" style="background-color:#f1f1f1">
+                    <button id="myButton" class="submitid" >submit</button>   
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+            </div>
+    </div>
+	<div class="section section2">
+        <div class="page1">
+		<p>眾所周知，人的發育會受到先天和後天的影響。 </p>
+		<h4>而「先天」的因素指的就是「基因」，
+                <br>如果能自由地修改人的基因，
+                <br>便能很大程度上決定人發育完全後的模樣。</h4>
+    </div>
+    </div>
+	<div class="section section3">
+        <div class="page2">
+		<p>CRISPR是細菌的一部份。</p>
+		<h4>目前最新、最方便的基因修改技術便是CRISPR基因編輯技術。
+                <br>CRISPR是一種細菌內的特殊核酸內切酶，
+                <br>會辨認外來的DNA並切割降解，
+                <br>原本是細菌用以抵抗外來病毒感染的防禦機制。
+                <br><br>
+                後來，科學家成功破解CRISPR對於目標DNA的辨認機制，
+                <br>了解了CRISPR如何瞄準特定的基因，
+                <br>因此可以藉由人工修改的方式變更其專一性，
+                <br>可以有目的性地結合並切割目標DNA，
+                由此自由編輯DNA。
+        </h4>
+        </div>
+    </div>
     
-    <body>
-        <div id="home">
-        <h1>DNA <br>determines<br>your appearance!</h1>
-        <h2>check out below
-            <a href="#1"><button class="button">GO!</button></a></h2>
-        <br>
-        <br>
-        <HR color="#939699" width="90%" 2px solid align="middle"></HR>
+    <div class="section section4">
+        <div class="page3">
+		<h4>CRISPR雖然並非唯一的基因修改技術，
+            <br>但由於其便利性和低廉的價格，
+            <br>或許會成為基因修改技術的主流。 </h4>
+        </div>
+	</div>
+
+	<div class="section section5">
+        <div class="page4">
+        <img src="picture/4147ac85d72b4ecc8415af9337277cfe20180503073050.jpg" >
+        <h4>首次將CRISPR技術運用於編修哺乳類動物基因的張鋒教授
+            <br>
+            <br>張鋒（英語：Zhang Feng，1981年10月22日－），
+            <br>生於中國石家莊市，美國籍神經生物學家，
+            <br>現任麻省理工學院教授。
+            <br>2016年蓋爾德納國際獎得主。
+        </h4>		
         </div>
 
+</div>
 
+<script>
+
+         $('#bt1').click(function(){
+        $.fn.fullpage.moveSectionDown();
+        });
+
+        document.getElementById("myForm").addEventListener("submit", myFunction);
+
+        function myFunction(e) {
+            e.preventDefault(); 
+            
+            console.log('xxxxxxx')
+            window.location = 'index.1.html'   
+        }
     
-        <p> <a id="1"></a>Question 1：<br>
-        從第一印象看一個人第一印象的注重程度：（共有30點 可以在額度內自由分配）</p>
 
-    <div class="slidecontainer">
-        <div>
-            <p>眼 eyes</p>
-            <p><input type="range" min="0" max="30" value="0" class="slider" id="eyeRange">
-            Value: <span id="eyevalue"></span></p>
-        </div>
+        // Get the modal
+        var modal = document.getElementById('id01');
         
-        <div>
-            <p>耳 ears </p>
-            <p><input type="range" min="0" max="30" value="0" class="slider" id="earRange">
-            Value: <span id="earvalue"></span></p>
-        </div>
-        
-        <div>
-            <p>鼻 nose </p>
-            <p><input type="range" min="0" max="30" value="0" class="slider" id="noseRange">
-            Value: <span id="nosevalue"></span></p>
-        </div>
-        
-        <div>
-            <p>口 mouth </p>
-            <p><input type="range" min="0" max="30" value="0" class="slider" id="mouthRange">
-            Value: <span id="mouthvalue"></span></p>
-        </div>
-        
-        <div>
-            <p>身高 height </p>
-            <p><input type="range" min="0" max="30" value="0" class="slider" id="heightRange">
-            Value: <span id="heightvalue"></span></p>
-        </div>  
-        
-    </div> 
-    <p>Question 2：
-        如果以後有機會選擇，用生物技術crispr來依構想製造小孩，你希望他長怎麼樣呢！
-（每一個部分有三個選項）</p>
-    <script src="table.js"></script>
-    </body>
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function chk  (obj)
+        {
+        var that = obj;
+           if(document.getElementById(that.id).checked == true) {
+              document.getElementById('1').checked = false;
+              document.getElementById('2').checked = false;
+              document.getElementById('3').checked = false;
+              document.getElementById('4').checked = false;
+              document.getElementById(that.id).checked = true;
+           }
+        }
+        </script>
+
+</body>
 </html>

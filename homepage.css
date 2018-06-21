@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:600|Open+Sans:700);
+h1{
+    font-display: fallback;
+    position: center;
+    font-size: 170px;
+    overflow: hidden;
+    font-size-adjust: inherit;
+    font-family: 'Open Sans', sans-serif;
+    color: #fa6b61d4;
+    border-radius: 10px;
+    text-shadow:
+                -5px 2px 0 rgba(245, 245, 245, 0.625),
+                3px -12px 0 rgb(2, 85, 52, 0.7),
+                -1px 1px 0 rgb(141,193,178),
+                3.5px -13px 0 rgb(0,0,0,0.5);
+}
+
+h4{ 
+    overflow: hidden;
+    position: relative;
+    bottom: 180px;
+    font-size: 22px;
+    font-size-adjust: abosulute;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: rgb(45, 43, 43);
+    font-weight: 200;
+    letter-spacing:8px;
+    text-decoration:blink; 
+    text-shadow:
+                -5px 2px 0 rgba(245, 245, 245)
+}
+/* body {font-family: Arial, Helvetica, sans-serif;} */
+
+button {
+background-color: #ffffff;
+border: none;
+color: black;
+padding: none;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: inherit;
+margin: 4px 2px;
+-webkit-transition-duration: inherit;
+transition-duration: 0.4s;
+cursor: pointer;
+width: 20%;
+z-index: +1;
+font-size: 25px;
+font: lighter;
+font-family: 'Playfair Display', serif;
+}
+
+.gobelow{
+    background-color: rgba(72, 97, 53, 0.708);
+    color:white;
+    border: 3px solid rgba(72, 97, 53, 0.708);
+    position: fixed;
+    bottom: 28%;
+    right: 40%;
+    float: left;
+}
+
+.gobelow:hover{
+    background-color: whitesmoke;
+    color: rgba(227, 32, 84, 0.749);
+    border: 5px  rgba(72, 97, 53, 0.612);
+}
+
+.start{
+    background-color: whitesmoke;
+    color: grey;
+    border: 3px solid rgb(163, 172, 187);
+    position: fixed;
+    bottom: 28%;
+    right: 15%;
+    float: right;
+}
+
+.start:hover{
+    background-color: rgba(227, 32, 84, 0.749);
+    color: whitesmoke;
+    border: 5px red;
+}
+
+h5{
+    font-size: 22px;
+    display: inline;
+    position: relative;
+}
+
+/* Full-width input fields */
+input[type=number] {
+    height: 34px;
+    width: 16%;
+    display: inline-block;
+    border: 0.5px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=email] {
+    height: 34px;
+    width: 28%;
+    display: inline-block;
+    border: 0.5px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+select[name="gender"],select[name="siblings"]{
+    width: 15%
+}
+
+
+/* Set a style for all buttons */
+.container {
+    background-color: #f97268e0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    position: relative;;
+
+}
+
+
+.yes {
+font-size:15px;
+color:white;
+position: relative;
+left:380px;
+}
+.start:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: 8;
+    background-color: whitesmoke;
+    float: left;
+    color: rgb(245, 168, 168);
+    border: none;
+    padding: none;
+    display: block;
+    margin: 10px 20px 20px 8px;
+    text-decoration: none;
+    -webkit-transition-duration: inherit;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 2;
+    font: lighter;
+    font-size: 28px;
+}
+.cancelbtn:hover{
+    color: rgb(147, 166, 223);
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 14px 0 14px 0;
+    position: relative;
+    z-index: +1;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.downcontainer {
+    padding: none;
+}
+
+.submitid{
+    background-color: rgb(250, 164, 178);
+    width: 50;
+    color: white;
+    border: none;
+    padding: none;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 4px 20px 25px 8px;
+    -webkit-transition-duration: inherit;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 2;
+    font: lighter;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    float: right;
+}
+.submitid:hover{
+        color:rgb(255, 234, 0); 
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 30px;
+    overflow-y: scroll;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    overflow: scroll;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: rgb(17, 14, 14);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(245, 168, 168);
+    color: #d69baf;
+    cursor: pointer;
+}
+
+.page1 h4{
+    padding-top: 13%;   
+    font-weight: 300;
+}
+
+.page1 p{
+    padding-top:10%; 
+}
+
+.page2 h4{
+    bottom: 17%;  
+    font-weight: 300;
+}
+
+
+
+.page3 h4{
+    padding-top: 30%;  
+    font-weight: 300;
+}
+
+.page4 img{
+    top:2%;
+    height: 46%;
+    width: 46%;
+}
+
+
+.page4 h4{
+    bottom: 6%;
+    font-weight: 300;
+    z-index: 1;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}

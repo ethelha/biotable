@@ -1,4 +1,3 @@
-
 var slider = document.getElementById("eyeRange");
 var eyeoutput = document.getElementById("eyevalue");
 eyeoutput.innerHTML = slider.value; // Display the default slider value

@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage整頁垂直導航跳頁動畫js</title>
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<link href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display" rel="stylesheet">
+<link href="index.1.css" rel="stylesheet" type="text/css">
+<style>
+.section { text-align: center; font: "Microsoft Yahei"; color: #fff;}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.fullPage.js"></script>
+<script>
+$(function(){  
+	$('#dowebok').fullpage({
+        'anchors': true,
+		sectionsColor: ['#c4e1e1', ' #8dc1b2', '#e0e0e0', '#d36b8e', '#c4e1e1'],
+		'navigation': true,
+        normalScrollElements: '.modal',
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div id="dowebok">
+	<div class="section section1">
+        <div class="box">
+            <div class="Q1">
+                <form method="POST" id="yourForm" name="yourForm" action="#">
+                <p>1.假設您今天沒有經濟壓力，那麼您會願意花多少錢為孩子進行外觀上的基因重組 ？
+                </p>
+                    <label for="cost">
+                    <input type="number" min="0" id="cost" placeholder="Please Enter The Amount of Money" name="cost" required >
+                    </label>
+            </div>
+            <div class="Q2">
+                    <p>2.如果你可以決定你未來小孩的樣貌，你會如何選擇 ? <p1>(數字越大代表越重視，共有30點，可以在額度內自由分配)</p1></p>
+                <div class="slidecontainer">
+                    <div class="div-inline">
+                        <br>
+                        <span> eyes</span>
+                        <p><input type="range" orient="vertical"  min="0" max="30" value="0" class="sliders" id="eyeRange">
+                        <span id="eyevalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span> ears </span>
+                        <p><input type="range" orient="vertical" min="0" max="30" value="0" class="sliders" id="earRange">
+                        <span id="earvalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span> nose  </span>
+                        <p><input type="range" orient="vertical" min="0" max="30" value="0" class="sliders" id="noseRange">
+                         <span id="nosevalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span>mouth     </span>
+                        <p><input type="range" orient="vertical"  min="0" max="30" value="0" class="slider" id="mouthRange">
+                        <span id="mouthvalue"></span></p>
+                    </div>
+                    
+                    <div class="div-inline">
+                        <br>
+                        <span>height </span>
+                        <p><input type="range" orient="vertical" min="0" max="30" value="0" class="slider" id="heightRange">
+                        <span id="heightvalue"></span></p>
+                    </div>  
+                    <button class="save1" type="submit">SAVE</button>
+                    <button class="gobelow" id="p1">NEXT</button>
+                </form>
+                </div> 
+                
+            </div>
+        
+    </div>
+    </div>
+	<div class="section section2">
+        <h3>STEP 2</h3>
+        <button class="save2" type="submit">SAVE</button>
+        <button class="godown" id="p2">NEXT</button>
+		<p>clusters of regularly interspaced 
+                <br>short palindromic repeats</p>
+	</div>
+	<div class="section section3">
+		<h3>RESULT</h3>
+		<p>clusters of regularly interspaced 
+                <br>short palindromic repeats</p>
+	</div>
+	<div class="section section4">
+		<h3>第四頁</h3>
+		<p>dffbgvcnbn</p>
+	</div>
+    <div class="section section5">
+		<h3>第五頁</h3>
+		<p>sdfdf</p>
+	</div>
+</div>
+
+<script>
+
+
+        $('#p1').click(function(){
+        $.fn.fullpage.moveSectionDown();
+        });
+
+        $('#p2').click(function(){
+        $.fn.fullpage.moveSectionDown();
+        });
+
+
+
+        </script>
+        <script src="table.js"></script>
+
+</body>
+</html>
